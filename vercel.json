@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/co-parenting_peace_book_funnel_landing_page/index.html"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/co-parenting_peace_book_funnel_landing_page/$1"
+    }
+  ]
+}
