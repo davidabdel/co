@@ -71,7 +71,7 @@
                 <span class="material-symbols-outlined text-text-main">menu_book</span>
                 <h2 class="text-text-main text-lg font-bold tracking-tight">Co-Parenting Peace</h2>
             </div>
-            <button
+            <button onclick="openModal()"
                 class="hidden sm:flex bg-primary hover:bg-primary-dark transition-colors text-text-main text-sm font-bold px-6 py-2.5 rounded-full items-center gap-2">
                 <span>Get the Book</span>
                 <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
@@ -98,7 +98,7 @@
                         You love your kids — but transition days don’t have to feel like a battlefield.
                     </p>
                     <div class="flex flex-col sm:flex-row gap-4 pt-4">
-                        <button
+                        <button onclick="openModal()"
                             class="flex-1 sm:flex-none bg-primary hover:bg-primary-dark transition-all transform hover:-translate-y-1 shadow-soft text-text-main text-base font-bold px-8 py-4 rounded-full flex items-center justify-center gap-2">
                             <span>Yes! Get Instant Access</span>
                             <span class="material-symbols-outlined">download</span>
@@ -366,7 +366,7 @@
                             <span class="text-4xl sm:text-5xl font-black text-text-main mt-1">$37</span>
                             <span class="text-sm text-text-muted font-medium mt-1">Special Bundle Price</span>
                         </div>
-                        <button
+                        <button onclick="openModal()"
                             class="w-full sm:w-auto bg-primary hover:bg-primary-dark shadow-lg shadow-primary/30 text-text-main text-lg font-bold px-10 py-4 rounded-full flex items-center justify-center gap-2 animate-pulse">
                             <span>Get Instant Access Now</span>
                             <span class="material-symbols-outlined">download</span>
@@ -524,7 +524,7 @@
             <h2 class="text-3xl sm:text-4xl font-black">Reclaim Your Peace — Starting With Your Next Message</h2>
             <p class="text-gray-400 max-w-2xl text-lg">Don't let another week of stress and conflict go by. The solution
                 is waiting for you.</p>
-            <button
+            <button onclick="openModal()"
                 class="bg-primary hover:bg-white hover:text-text-main transition-colors text-text-main text-lg font-bold px-12 py-5 rounded-full flex items-center gap-2 shadow-lg shadow-primary/20">
                 <span>Get Instant Access</span>
                 <span class="material-symbols-outlined">download</span>
@@ -557,6 +557,53 @@
             <p class="text-sm text-text-muted">© 2023 Co-Parenting Peace. All rights reserved.</p>
         </div>
     </footer>
+    <!-- Order Modal -->
+    <div id="orderModal" class="fixed inset-0 z-[100] hidden" aria-labelledby="modal-title" role="dialog"
+        aria-modal="true">
+        <!-- Backdrop -->
+        <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity backdrop-blur-sm" onclick="closeModal()">
+        </div>
+
+        <div class="flex min-h-full items-center justify-center p-4 text-center sm:p-0">
+            <div
+                class="relative transform overflow-hidden rounded-2xl bg-white text-left shadow-xl transition-all sm:my-8 w-full max-w-4xl h-[85vh] flex flex-col">
+                <div class="bg-white px-4 py-3 sm:px-6 flex justify-between items-center border-b border-gray-100">
+                    <h3 class="text-lg font-semibold leading-6 text-text-main" id="modal-title">Complete Your Order</h3>
+                    <button type="button"
+                        class="rounded-full bg-gray-100 p-1 text-gray-400 hover:text-gray-500 hover:bg-gray-200 focus:outline-none transition-colors"
+                        onclick="closeModal()">
+                        <span class="sr-only">Close</span>
+                        <span class="material-symbols-outlined text-xl">close</span>
+                    </button>
+                </div>
+                <div class="flex-1 w-full h-full bg-gray-50 relative">
+                    <iframe src="https://co-fam.uconnect.com.au" class="absolute inset-0 w-full h-full border-0"
+                        title="Order Form"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openModal() {
+            const modal = document.getElementById('orderModal');
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('orderModal');
+            modal.classList.add('hidden');
+            document.body.style.overflow = ''; // Restore scrolling
+        }
+
+        // Close modal on Escape key press
+        document.addEventListener('keydown', function (event) {
+            if (event.key === 'Escape') {
+                closeModal();
+            }
+        });
+    </script>
 </body>
 
 </html>
