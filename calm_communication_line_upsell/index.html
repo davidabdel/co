@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emma Hartley Calm Communication Line</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@400;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Material Symbols -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        "pastel-blue": "#AFCBFF",
+                        "soft-sage": "#CDE8CF",
+                        "gentle-peach": "#F7D9C4",
+                        "light-cream": "#FFF8F1",
+                        "warm-charcoal": "#4A4A4A",
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    borderRadius: {
+                        'xl': '1rem',
+                        '2xl': '1.5rem',
+                        '3xl': '2rem',
+                    },
+                    boxShadow: {
+                        'soft': '0 10px 40px -10px rgba(0, 0, 0, 0.1)',
+                        'hover': '0 20px 40px -10px rgba(0, 0, 0, 0.15)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #FFF8F1;
+            color: #4A4A4A;
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .fade-in {
+            animation: fadeIn 1.2s ease-out forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .delay-100 {
+            animation-delay: 0.1s;
+        }
+
+        .delay-200 {
+            animation-delay: 0.2s;
+        }
+
+        .delay-300 {
+            animation-delay: 0.3s;
+        }
+    </style>
+</head>
+
+<body class="overflow-x-hidden">
+
+    <!-- SECTION 1: ABOVE THE FOLD -->
+    <section class="relative min-h-screen flex items-center justify-center px-6 py-20 overflow-hidden">
+        <!-- Background Decor -->
+        <div class="absolute top-[-10%] left-[-10%] w-[500px] h-[500px] bg-pastel-blue/20 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-[-10%] right-[-10%] w-[500px] h-[500px] bg-gentle-peach/20 rounded-full blur-3xl">
+        </div>
+
+        <div class="relative z-10 max-w-4xl mx-auto text-center fade-in">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 text-warm-charcoal">
+                Want Calm Support In the Exact Moments You Need It Most?
+            </h1>
+            <p class="text-lg md:text-xl text-warm-charcoal/80 mb-10 max-w-2xl mx-auto leading-relaxed">
+                You now have the co-parenting framework. This gives you support while you use it — especially when
+                emotions run high.
+            </p>
+
+            <div class="mb-10 flex justify-center fade-in delay-100">
+                <!-- Author Image -->
+                <div class="relative group">
+                    <div
+                        class="absolute inset-0 bg-pastel-blue/20 rounded-full blur-2xl transform scale-110 group-hover:scale-125 transition-transform duration-700">
+                    </div>
+                    <img src="author.png" alt="Emma Hartley - Calm Support"
+                        class="relative z-10 w-64 h-64 md:w-80 md:h-80 rounded-full object-cover border-8 border-white shadow-soft group-hover:shadow-hover transition-all duration-500 transform group-hover:scale-[1.02]">
+
+                    <!-- status indicator -->
+                    <div class="absolute bottom-6 right-6 z-20 bg-green-400 w-6 h-6 rounded-full border-4 border-white shadow-sm"
+                        title="Available for support"></div>
+                </div>
+            </div>
+
+            <div class="fade-in delay-200">
+                <button
+                    class="bg-pastel-blue hover:bg-pastel-blue/90 text-warm-charcoal font-semibold text-lg px-10 py-5 rounded-full shadow-soft hover:shadow-hover transition-all duration-300 transform hover:-translate-y-1">
+                    Yes — I Want Calm Support →
+                </button>
+                <p class="mt-4 text-sm text-warm-charcoal/60">6-month access · Cancel anytime after · Calm-first support
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: PROBLEM CLARIFICATION -->
+    <section class="py-20 px-6 bg-white/50 rounded-[3rem] mx-4 md:mx-10 shadow-sm border border-white/50">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-semibold mb-8">Reading Is Easy. Responding Calmly In the Moment Is the
+                Hard Part.</h2>
+            <div class="text-lg text-warm-charcoal/80 leading-relaxed space-y-6">
+                <p>Most co-parenting breakdowns don’t happen because you don’t know what to do. They happen because
+                    emotions spike before you can apply it.</p>
+                <ul
+                    class="text-left max-w-md mx-auto space-y-4 bg-light-cream p-8 rounded-2xl border border-gentle-peach/30">
+                    <li class="flex items-center gap-3"><span
+                            class="material-symbols-outlined text-gentle-peach">error</span> Right after a triggering
+                        message</li>
+                    <li class="flex items-center gap-3"><span
+                            class="material-symbols-outlined text-gentle-peach">dark_mode</span> Late at night</li>
+                    <li class="flex items-center gap-3"><span
+                            class="material-symbols-outlined text-gentle-peach">sync_alt</span> During transition days
+                    </li>
+                    <li class="flex items-center gap-3"><span
+                            class="material-symbols-outlined text-gentle-peach">graphic_eq</span> When your words get
+                        twisted</li>
+                    <li class="flex items-center gap-3"><span
+                            class="material-symbols-outlined text-gentle-peach">hearing_disabled</span> When silence
+                        feels unbearable</li>
+                </ul>
+                <p class="font-medium text-xl mt-6">That’s when support matters most.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: INTRODUCE THE OFFER -->
+    <section class="py-20 px-6 text-center">
+        <div class="max-w-3xl mx-auto">
+            <span class="text-3xl mb-4 block">🌿</span>
+            <h2 class="text-4xl md:text-5xl font-bold mb-4">The Emma Hartley Calm Communication Line</h2>
+            <h3 class="text-xl md:text-2xl text-warm-charcoal/80 mb-8 font-serif italic">On-demand voice & chat support
+                — grounded in the exact framework you just purchased.</h3>
+
+            <div class="inline-block bg-white px-8 py-6 rounded-2xl shadow-sm border border-pastel-blue/20">
+                <p class="text-warm-charcoal font-medium">
+                    This is not therapy. This is not legal advice.<br>
+                    <span class="text-pastel-blue font-bold">This is calm, structured communication support — exactly
+                        when you need it.</span>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: HOW IT WORKS -->
+    <section class="py-20 px-6">
+        <div class="max-w-5xl mx-auto bg-soft-sage text-warm-charcoal rounded-[3rem] p-10 md:p-16 shadow-soft">
+            <div class="grid md:grid-cols-3 gap-10">
+                <div class="text-center group">
+                    <div
+                        class="w-20 h-20 bg-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-sm group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-3xl text-soft-sage">notifications_active</span>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">1. Something Happens</h4>
+                    <p class="text-sm opacity-90">A message arrives. Emotions spike. You feel unsure how to respond.</p>
+                </div>
+                <div class="text-center group">
+                    <div
+                        class="w-20 h-20 bg-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-sm group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-3xl text-soft-sage">call</span>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">2. Call or Message Emma</h4>
+                    <p class="text-sm opacity-90">Talk it through. Slow it down. Get grounded.</p>
+                </div>
+                <div class="text-center group">
+                    <div
+                        class="w-20 h-20 bg-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-sm group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-3xl text-soft-sage">chat_bubble</span>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">3. Respond Calmly</h4>
+                    <p class="text-sm opacity-90">Get neutral wording options that protect your peace and keep things
+                        child-focused.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5: WHAT YOU GET -->
+    <section class="py-20 px-6">
+        <div
+            class="max-w-4xl mx-auto bg-gentle-peach/30 rounded-[3rem] p-10 md:p-16 shadow-soft border border-gentle-peach/50">
+            <h2 class="text-center text-3xl font-bold mb-12">Included With Your Membership:</h2>
+            <div class="grid md:grid-cols-2 gap-y-8 gap-x-12">
+                <div class="flex gap-4">
+                    <span class="material-symbols-outlined text-warm-charcoal mt-1">check_circle</span>
+                    <div>
+                        <h4 class="font-bold text-lg">24/7 Voice & Chat Access</h4>
+                        <p class="text-sm opacity-80">Talk through situations before you respond.</p>
+                    </div>
+                </div>
+                <div class="flex gap-4">
+                    <span class="material-symbols-outlined text-warm-charcoal mt-1">check_circle</span>
+                    <div>
+                        <h4 class="font-bold text-lg">Calm Response Suggestions</h4>
+                        <p class="text-sm opacity-80">Neutral, child-focused wording — no escalation.</p>
+                    </div>
+                </div>
+                <div class="flex gap-4">
+                    <span class="material-symbols-outlined text-warm-charcoal mt-1">check_circle</span>
+                    <div>
+                        <h4 class="font-bold text-lg">De-Escalation Support</h4>
+                        <p class="text-sm opacity-80">Help calming your nervous system before replying.</p>
+                    </div>
+                </div>
+                <div class="flex gap-4">
+                    <span class="material-symbols-outlined text-warm-charcoal mt-1">check_circle</span>
+                    <div>
+                        <h4 class="font-bold text-lg">Boundary Language Help</h4>
+                        <p class="text-sm opacity-80">Say “no” without guilt or conflict.</p>
+                    </div>
+                </div>
+                <div class="flex gap-4">
+                    <span class="material-symbols-outlined text-warm-charcoal mt-1">check_circle</span>
+                    <div>
+                        <h4 class="font-bold text-lg">High-Conflict Scenario Guidance</h4>
+                        <p class="text-sm opacity-80">Holidays, school issues, money, silence, last-minute changes.</p>
+                    </div>
+                </div>
+                <div class="flex gap-4">
+                    <span class="material-symbols-outlined text-warm-charcoal mt-1">check_circle</span>
+                    <div>
+                        <h4 class="font-bold text-lg">Consistent, Non-Judgmental Support</h4>
+                        <p class="text-sm opacity-80">Same calm tone. Every time.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-12 pt-8 border-t border-warm-charcoal/10 text-center">
+                <p class="text-lg font-medium italic">If this only helped you avoid one emotional spiral this month —
+                    would it be worth it?</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 6: PRICING -->
+    <section class="py-20 px-6 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-10">Support While You Build the Skill — Not Just Information</h2>
+
+        <div
+            class="max-w-xl mx-auto bg-white p-10 rounded-3xl shadow-hover border border-pastel-blue/30 relative overflow-hidden">
+            <div class="absolute top-0 left-0 w-full h-2 bg-pastel-blue"></div>
+            <h3 class="text-5xl font-bold text-warm-charcoal mb-4">$497</h3>
+            <p class="text-xl font-medium mb-2">for 6 Months of Access</p>
+            <p class="text-sm text-warm-charcoal/60 mb-8">Then $97/month after — only if you choose to continue.</p>
+
+            <div class="space-y-4 text-warm-charcoal/80 mb-8 text-sm">
+                <p>Most parents use this most during high-conflict seasons.</p>
+                <p>Stay as long as it serves you.</p>
+                <p>Leave anytime after the initial period.</p>
+            </div>
+
+            <div class="bg-light-cream py-3 rounded-lg text-sm font-medium">
+                No pressure. No lock-in beyond the first 6 months.
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 7: WHY THIS WORKS -->
+    <section class="py-20 px-6 bg-white rounded-[3rem] mx-4 md:mx-10 shadow-sm">
+        <div class="max-w-2xl mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-10">Why This Support Changes Everything</h2>
+            <ul class="space-y-4 text-lg text-left inline-block mx-auto mb-10">
+                <li class="flex items-center gap-3"><span class="w-2 h-2 rounded-full bg-pastel-blue"></span> You pause
+                    before reacting</li>
+                <li class="flex items-center gap-3"><span class="w-2 h-2 rounded-full bg-pastel-blue"></span> You remove
+                    emotional language</li>
+                <li class="flex items-center gap-3"><span class="w-2 h-2 rounded-full bg-pastel-blue"></span> You
+                    respond with clarity</li>
+                <li class="flex items-center gap-3"><span class="w-2 h-2 rounded-full bg-pastel-blue"></span> You
+                    protect your energy</li>
+                <li class="flex items-center gap-3"><span class="w-2 h-2 rounded-full bg-pastel-blue"></span> You stay
+                    focused on your child</li>
+            </ul>
+            <p class="text-xl font-serif italic text-warm-charcoal/80">
+                Calm communication is a skill.<br>
+                This gives you support while you learn it.
+            </p>
+        </div>
+    </section>
+
+    <!-- SECTION 8: SAFETY & BOUNDARIES -->
+    <section class="py-20 px-6">
+        <div class="max-w-3xl mx-auto bg-soft-sage/50 p-8 md:p-12 rounded-3xl text-center border border-soft-sage">
+            <h2 class="text-2xl font-bold mb-6">Clear, Ethical, Emotionally Safe Support</h2>
+            <p class="mb-4">Emma provides communication guidance only.</p>
+            <p class="mb-4 font-bold">No therapy. No legal advice. No diagnosis.</p>
+            <p class="mb-4">When situations require professional help, Emma encourages appropriate next steps.</p>
+            <p class="mt-6 text-sm opacity-80">This space exists to protect your peace — not replace support systems.
+            </p>
+        </div>
+    </section>
+
+    <!-- SECTION 9: FINAL CTA -->
+    <section class="py-20 px-6 text-center">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-bold mb-10">You Don’t Have to Navigate This Alone</h2>
+            <button
+                class="bg-pastel-blue hover:bg-pastel-blue/90 text-warm-charcoal font-semibold text-xl px-12 py-6 rounded-full shadow-soft hover:shadow-hover transition-all duration-300 transform hover:-translate-y-1 w-full md:w-auto">
+                Add Calm Support to My Order →
+            </button>
+            <p class="mt-6 text-sm text-warm-charcoal/60">Immediate access · Calm-first · Cancel anytime after 6 months
+            </p>
+        </div>
+    </section>
+
+    <!-- SECTION 10: FOOTER CLOSE -->
+    <footer class="py-20 px-6 text-center bg-white border-t border-light-cream">
+        <div class="max-w-xl mx-auto">
+            <div class="w-40 h-40 bg-gentle-peach/20 rounded-full mx-auto mb-8 flex items-center justify-center">
+                <span class="material-symbols-outlined text-6xl text-gentle-peach">family_restroom</span>
+                <!-- Illustration: Parent and child walking calmly -->
+            </div>
+            <p class="text-2xl font-serif italic text-warm-charcoal/80">
+                "Peace isn’t something you wait for.<br>
+                It’s something you practice — with support."
+            </p>
+            <div class="mt-12 text-sm text-warm-charcoal/40 flex justify-center gap-6">
+                <a href="#" class="hover:text-warm-charcoal">Privacy</a>
+                <a href="#" class="hover:text-warm-charcoal">Terms</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
