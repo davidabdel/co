@@ -1,6 +1,14 @@
 {
   "rewrites": [
     {
+      "source": "/upsell",
+      "destination": "/calm_communication_line_upsell/index.html"
+    },
+    {
+      "source": "/upsell/(.*)",
+      "destination": "/calm_communication_line_upsell/$1"
+    },
+    {
       "source": "/",
       "destination": "/co-parenting_peace_book_funnel_landing_page/index.html"
     },
