@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html class="light" lang="en">
+<html class="light scroll-smooth" lang="en">
 
 <head>
     <meta charset="utf-8" />
@@ -113,9 +113,9 @@
                 <!-- Left Content -->
                 <div class="flex flex-col gap-6 text-left order-2 lg:order-1">
                     <div
-                        class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/30 text-[#ad6a42] text-xs font-bold uppercase tracking-wider w-fit">
-                        <span class="material-symbols-outlined text-sm">download</span>
-                        Special Instant Access Bundle
+                        class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/30 text-[#ad6a42] text-xs font-bold tracking-wider w-fit">
+                        <span class="material-symbols-outlined text-sm">check_circle</span>
+                        Get calm control over your next message
                     </div>
                     <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black leading-[1.1] tracking-tight text-text-main">
                         Stop the Fighting &amp; Start Co-Parenting with Peace.
@@ -125,17 +125,40 @@
                         to reduce conflict and protect your calm.
                         You love your kids — but transition days don’t have to feel like a battlefield.
                     </p>
-                    <div class="flex flex-col sm:flex-row gap-4 pt-4">
-                        <button onclick="openModal()"
-                            class="flex-1 sm:flex-none bg-primary hover:bg-primary-dark transition-all transform hover:-translate-y-1 shadow-soft text-text-main text-base font-bold px-8 py-4 rounded-full flex items-center justify-center gap-2">
-                            <span>Yes! Get Instant Access</span>
-                            <span class="material-symbols-outlined">download</span>
-                        </button>
-                    </div>
-                    <p class="text-xs text-text-muted italic flex items-center gap-1">
-                        <span class="material-symbols-outlined text-sm text-green-600">lock</span>
-                        Secure checkout. 100% Satisfaction Guarantee.
+
+                    <p class="text-sm text-text-muted font-medium text-center sm:text-left max-w-lg">
+                        Start with one simple shift that changes how you respond — not how you fight.
                     </p>
+                    <div class="flex flex-col gap-3 pt-4 items-center sm:items-start">
+                        <button onclick="openModal()"
+                            class="bg-primary hover:bg-primary-dark transition-colors text-text-main text-lg font-bold px-8 py-4 rounded-full flex items-center justify-center gap-2 shadow-lg shadow-primary/20 w-full sm:w-fit">
+                            <span>Get Instant Access</span>
+                            <span class="material-symbols-outlined">arrow_forward</span>
+                        </button>
+                        <p class="text-sm text-text-muted font-medium">Digital access. Start in minutes.</p>
+                        <a href="#what-you-get"
+                            class="flex items-center gap-1 text-sm font-bold text-text-main hover:text-primary-dark transition-colors w-fit group">
+                            <span>What's included</span>
+                            <span
+                                class="material-symbols-outlined text-lg group-hover:translate-y-1 transition-transform">arrow_downward</span>
+                        </a>
+                    </div>
+
+                    <!-- Quick Social Proof -->
+                    <div
+                        class="flex items-center gap-3 bg-white/50 backdrop-blur-sm border border-primary/20 p-3 rounded-xl w-fit mt-2">
+                        <div class="flex text-yellow-400">
+                            <span class="material-symbols-outlined text-[18px] fill-current">star</span>
+                            <span class="material-symbols-outlined text-[18px] fill-current">star</span>
+                            <span class="material-symbols-outlined text-[18px] fill-current">star</span>
+                            <span class="material-symbols-outlined text-[18px] fill-current">star</span>
+                            <span class="material-symbols-outlined text-[18px] fill-current">star</span>
+                        </div>
+                        <p class="text-sm text-text-muted italic">
+                            “I stopped reacting emotionally within days.” <span
+                                class="not-italic font-bold text-text-main block sm:inline">— Anna, Parent of 2</span>
+                        </p>
+                    </div>
                 </div>
                 <!-- Right Image (Book Mockup) -->
                 <div class="relative order-1 lg:order-2 flex justify-center">
@@ -241,13 +264,38 @@
         </div>
     </div>
     <!-- Value Stack Section -->
-    <div class="bg-white py-20">
+    <div id="what-you-get" class="bg-white py-20">
         <div class="max-w-[800px] mx-auto px-6">
             <div class="bg-white rounded-3xl shadow-soft border border-[#e6ebf4] overflow-hidden">
                 <div class="bg-text-main text-white p-6 text-center">
-                    <h2 class="text-2xl font-bold">Here Is What You Get...</h2>
+                    <h2 class="text-2xl font-bold">What This Gives You Right Away</h2>
                 </div>
-                <div class="p-8 sm:p-12 flex flex-col gap-8">
+
+                <!-- Summary Section -->
+                <div class="p-8 pb-0 sm:px-12 sm:pt-12 flex flex-col gap-5">
+                    <div class="flex items-center gap-3">
+                        <span class="material-symbols-outlined text-green-500 font-bold">check_circle</span>
+                        <p class="text-text-main font-medium text-lg">A calmer way to respond to triggering messages</p>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <span class="material-symbols-outlined text-green-500 font-bold">check_circle</span>
+                        <p class="text-text-main font-medium text-lg">A simple framework you can use immediately</p>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <span class="material-symbols-outlined text-green-500 font-bold">check_circle</span>
+                        <p class="text-text-main font-medium text-lg">Relief without confrontation or escalation</p>
+                    </div>
+
+                    <button onclick="toggleStack()"
+                        class="text-text-muted font-bold flex items-center gap-1 mt-2 hover:text-primary-dark transition-colors w-fit py-2">
+                        <span>See everything included</span>
+                        <span id="stack-arrow"
+                            class="material-symbols-outlined text-lg transition-transform">expand_more</span>
+                    </button>
+                </div>
+
+                <div id="full-stack"
+                    class="hidden p-8 sm:p-12 pt-4 flex-col gap-8 border-t border-dashed border-gray-200 mt-6 mx-8 sm:mx-12">
                     <!-- Item 1 -->
                     <div class="flex items-start gap-4 pb-6 border-b border-dashed border-gray-200">
                         <div class="w-16 h-16 sm:w-24 sm:h-24 bg-gray-100 rounded-lg flex-shrink-0 bg-cover bg-center shadow-sm"
@@ -385,52 +433,53 @@
                         </div>
                     </div>
 
-                    <!-- Total Value Box -->
-                    <div
-                        class="bg-[#f8f9fc] rounded-2xl p-6 flex flex-col items-center gap-4 mt-4 border border-[#e6ebf4]">
-                        <div class="flex flex-col items-center">
-                            <div
-                                class="mb-3 inline-flex items-center gap-1.5 bg-green-50 border border-green-200 text-green-700 px-4 py-1.5 rounded-full text-sm font-bold shadow-sm">
-                                <span class="material-symbols-outlined text-lg">lock_clock</span>
-                                <span>$925 in Bonuses Included FREE Today</span>
-                            </div>
-                            <span class="text-lg font-bold text-text-muted">Total Value: <span
-                                    class="line-through decoration-red-500">$962.00</span></span>
-                            <span class="text-4xl sm:text-5xl font-black text-text-main mt-1">$37</span>
-                            <span class="text-sm text-text-muted font-medium mt-1">Special Bundle Price</span>
-                        </div>
-                        <button onclick="openModal()"
-                            class="w-full sm:w-auto bg-primary hover:bg-primary-dark shadow-lg shadow-primary/30 text-text-main text-lg font-bold px-10 py-4 rounded-full flex items-center justify-center gap-2 animate-pulse">
-                            <span>Get Instant Access Now</span>
-                            <span class="material-symbols-outlined">download</span>
-                        </button>
-                    </div>
-                    <!-- Single Outcome framing -->
-                    <div class="text-center mt-6">
-                        <p class="text-text-muted text-sm md:text-base font-medium">If this book only helped you avoid
-                            just one major argument this month — would it be worth $37?</p>
-                    </div>
+                </div> <!-- End hidden stack -->
 
-                    <!-- Price Anchor / Pain Cost -->
-                    <div class="mt-8 p-6 bg-red-50 rounded-xl border border-red-100">
-                        <p class="font-bold text-text-main mb-3 text-center">One unresolved argument can cost:</p>
-                        <ul class="space-y-2 text-sm text-text-muted max-w-md mx-auto mb-4">
-                            <li class="flex items-center gap-2"><span
-                                    class="material-symbols-outlined text-red-400 text-sm">close</span> Days of
-                                emotional exhaustion</li>
-                            <li class="flex items-center gap-2"><span
-                                    class="material-symbols-outlined text-red-400 text-sm">close</span> Sleepless nights
-                            </li>
-                            <li class="flex items-center gap-2"><span
-                                    class="material-symbols-outlined text-red-400 text-sm">close</span> Tension your
-                                child feels immediately</li>
-                        </ul>
-                        <p class="text-center font-bold text-text-main text-sm">This costs less than one stressful
-                            takeaway dinner.</p>
+                <!-- Total Value Box -->
+                <div class="bg-[#f8f9fc] rounded-2xl p-6 flex flex-col items-center gap-4 mt-4 border border-[#e6ebf4]">
+                    <div class="flex flex-col items-center">
+                        <div
+                            class="mb-3 inline-flex items-center gap-1.5 bg-green-50 border border-green-200 text-green-700 px-4 py-1.5 rounded-full text-sm font-bold shadow-sm">
+                            <span class="material-symbols-outlined text-lg">lock_clock</span>
+                            <span>$925 in Bonuses Included FREE Today</span>
+                        </div>
+                        <span class="text-lg font-bold text-text-muted">Total Value: <span
+                                class="line-through decoration-red-500">$962.00</span></span>
+                        <span class="text-4xl sm:text-5xl font-black text-text-main mt-1">$37</span>
+                        <span class="text-sm text-text-muted font-medium mt-1">Special Bundle Price</span>
                     </div>
+                    <button onclick="openModal()"
+                        class="w-full sm:w-auto bg-primary hover:bg-primary-dark shadow-lg shadow-primary/30 text-text-main text-lg font-bold px-10 py-4 rounded-full flex items-center justify-center gap-2 animate-pulse">
+                        <span>Get Instant Access Now</span>
+                        <span class="material-symbols-outlined">download</span>
+                    </button>
+                </div>
+                <!-- Single Outcome framing -->
+                <div class="text-center mt-6">
+                    <p class="text-text-muted text-sm md:text-base font-medium">If this book only helped you avoid
+                        just one major argument this month — would it be worth $37?</p>
+                </div>
+
+                <!-- Price Anchor / Pain Cost -->
+                <div class="mt-8 p-6 bg-red-50 rounded-xl border border-red-100">
+                    <p class="font-bold text-text-main mb-3 text-center">One unresolved argument can cost:</p>
+                    <ul class="space-y-2 text-sm text-text-muted max-w-md mx-auto mb-4">
+                        <li class="flex items-center gap-2"><span
+                                class="material-symbols-outlined text-red-400 text-sm">close</span> Days of
+                            emotional exhaustion</li>
+                        <li class="flex items-center gap-2"><span
+                                class="material-symbols-outlined text-red-400 text-sm">close</span> Sleepless nights
+                        </li>
+                        <li class="flex items-center gap-2"><span
+                                class="material-symbols-outlined text-red-400 text-sm">close</span> Tension your
+                            child feels immediately</li>
+                    </ul>
+                    <p class="text-center font-bold text-text-main text-sm">This costs less than one stressful
+                        takeaway dinner.</p>
                 </div>
             </div>
         </div>
+    </div>
     </div>
     <!-- Testimonials Section -->
     <div class="bg-[#f8f9fc] py-20">
@@ -497,7 +546,7 @@
                     <div class="flex items-center gap-4">
                         <div class="w-12 h-12 rounded-full bg-gray-200 bg-cover bg-center"
                             data-alt="Portrait of Emily R."
-                            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBxpgg5ZfVt3w45fkBcdu5MmvFVZUZfOQksxp5UB-lRRDy8sV5sWj4UyAzDM3LPM6lYqrs2GR3JE6DmLPazc1Crbuk_76dft79Hdp140Xqvd7zxqOM5VheN5VELCiZr2C2HWxJFuklwzns6-YwZuGIsYpK3RLemg0t_ak-yFB-atPrh1nQzB1KcS5fF1KhpC9Cvgj1n9g_SeHRwCn49EiA4DjKKjY6PWd8tauyl_xZUEShDY6PHKraduEUwHFnxOtgvA1M4cmJLefM');">
+                            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBxpgg5ZfVt3w45fkBcdu5MmvFVZUZfOQksxp5UB-lRRDy8sV5sWj4UyAzDM3LPM6lYqrs2GR3JE6DmLPazc1Crbuk_76dft79Hdp140Xqvd7zxqOM5VheN5VELCiZr2C2HWxJFuklwzns6-YwZuGIsYpK3RLemg0t_ak-yFB-atPrh1nQzB1KcS5fF1KhpC9Cvgj1n9g_SeHRuCn49EiA4DjKKjY6PWd8tauyl_xZUEShDY6PHKraduEUwHFnxOtgvA1M4cmJLefM');">
                         </div>
                         <div>
                             <p class="font-bold text-sm">Emily R.</p>
@@ -570,7 +619,7 @@
                     style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBpofY2f2k88VdKTp1_ePG9iJs9i-47tb3Vi5W4gB1HFVsBjNJIPK0mIdkvhWntgO9NE1TFv6PB1mKqkdAnFgIXprgzRKTsnm9KUU-Qu7Erbq69CDw50TNQEZR5Qf4Ds9ZQoovr-WbOrChUP6we911WDGdEYtvCp5HKGV8oIHK8UK4h5X5iCNldATFXkSZ9GJs0Nnxla6dGygwOeArRM3MvdyuQ2uB-NlcfjYJBAJLSiHD1jhZ0FcYaNO4tsCCXPZ0BUX_3g915j3Y');">
                 </div>
                 <div class="h-8 w-24 bg-contain bg-no-repeat bg-center" data-alt="Logo of a major tv network"
-                    style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAVTrWoF2HV5JyAF8HE7ukpHUBItuO-_Cim4YamW2ACNgr6gxAAp8Q1nSxmn8NkXhj9Si-IdctWVMtmSSx7m_miK40gAnqfF8HWRXNDzsWXB_kQ1vxRW8Co6a8G00B6qkKEDtzNcbpp_FuQUCCxqiiiVFFlnwx64OVKmPVsaKbJ2JyClvIgci5LiAt_pWcVDwfhgPKYg4A9Nhq6v0NGGr6Db8k98UgttXRnXP2Wv1rwyWSGkVKktnnDp6rrJ0X0ImwedpC9JwFHSRk');">
+                    style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAVTrWoF2HV5JyAF8HE7ukpHUBItuO-_Cim4YamW2ACNgr6gxAAp8Q1nSxmn8NkXhj9Si-IdctWVMtmSSx7m_miK40gAnqfF8HWRXNDzsXXB_kQ1vxRW8Co6a8G00B6qkKEDtzNcbpp_FuQUCCxqiiiVFFlnwx64OVKmPVsaKbJ2JyCl3Igci5LiAt_pWcVDwfhgPKYg4A9Nhq6v0NGGr6Db8k98UgttXRnXP2Wv1rwyWSGkVKktnnDp6rrJ0X0ImwedpC9JwFHSRk');">
                 </div>
             </div>
         </div>
@@ -636,6 +685,21 @@
                 closeModal();
             }
         });
+
+        function toggleStack() {
+            const stack = document.getElementById('full-stack');
+            const arrow = document.getElementById('stack-arrow');
+
+            if (stack.classList.contains('hidden')) {
+                stack.classList.remove('hidden');
+                stack.classList.add('flex');
+                arrow.classList.add('rotate-180');
+            } else {
+                stack.classList.add('hidden');
+                stack.classList.remove('flex');
+                arrow.classList.remove('rotate-180');
+            }
+        }
     </script>
 </body>
 
