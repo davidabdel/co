@@ -1,6 +1,10 @@
 {
   "rewrites": [
     {
+      "source": "/thank-you",
+      "destination": "/free_calm_coparenting_guide/thank-you/index.html"
+    },
+    {
       "source": "/book",
       "destination": "/co-parenting_peace_book_funnel_landing_page/index.html"
     },

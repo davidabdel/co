@@ -1,0 +1,319 @@
+/* Inherit base variables from parent styles, but redefine if needed for specificity */
+:root {
+    --bg-color: #FAF9F6;
+    --primary-blue: #6B8CA8;
+    --primary-blue-hover: #5A7890;
+    --sage-green: #AAB99A;
+    --warm-peach: #F4D0B8;
+    --text-color: #2C3338;
+    --text-muted: #5C656C;
+    --border-color: #E6E6E6;
+    --card-bg: #FFFFFF;
+    --shadow-soft: 0 10px 30px -10px rgba(0, 0, 0, 0.05);
+    --shadow-hover: 0 15px 40px -10px rgba(0, 0, 0, 0.08);
+    --radius-pill: 50px;
+    --radius-card: 16px;
+    --font-heading: 'Outfit', sans-serif;
+    --font-body: 'Inter', sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    font-family: var(--font-body);
+    color: var(--text-color);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: var(--font-heading);
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+.container {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Hero Section */
+.hero-section {
+    padding: 80px 0;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.hero-content {
+    max-width: 500px;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary-blue);
+    /* Friendly, reassuring */
+}
+
+.subheadline {
+    font-size: 1.25rem;
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+    font-weight: 400;
+}
+
+.body-paragraph {
+    font-size: 1.125rem;
+    margin-bottom: 2.5rem;
+    color: var(--text-color);
+}
+
+.primary-cta {
+    display: inline-block;
+    background-color: var(--primary-blue);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: var(--radius-pill);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.125rem;
+    transition: background-color 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.primary-cta:hover {
+    background-color: var(--primary-blue-hover);
+}
+
+.micro-copy {
+    display: block;
+    margin-top: 0.75rem;
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    opacity: 0.8;
+}
+
+/* Visualization */
+.hero-visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.book-mockup {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.1));
+    transform: rotate(-2deg);
+    /* Subtle playful angle */
+    transition: transform 0.3s ease;
+}
+
+.book-mockup:hover {
+    transform: rotate(0deg) translateY(-5px);
+}
+
+/* Supportive Section (Below Fold) */
+.supportive-section {
+    padding: 80px 0;
+    background-color: white;
+    border-radius: 30px 30px 0 0;
+    /* Soft top edge */
+}
+
+.supportive-content {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    /* Or left? "Two-column on desktop" was for hero. This section: "Heading, Bullet Points". Cleanest centered or left. Let's go centered for "What to do next" */
+}
+
+.supportive-content h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.steps-list {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    max-width: 500px;
+    margin: 0 auto 3rem;
+}
+
+.steps-list li {
+    margin-bottom: 1rem;
+    padding-left: 2rem;
+    position: relative;
+    font-size: 1.125rem;
+    color: var(--text-muted);
+}
+
+.steps-list li::before {
+    content: "•";
+    /* OR a soft check */
+    color: var(--sage-green);
+    position: absolute;
+    left: 0;
+    font-size: 1.5rem;
+    line-height: 1;
+    top: -2px;
+}
+
+.reassurance-line {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: var(--primary-blue);
+    margin-top: 2rem;
+}
+
+/* Soft Bridge */
+.soft-bridge-section {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.soft-divider {
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--border-color), transparent);
+    width: 80%;
+    margin: 0 auto 4rem;
+}
+
+.bridge-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.bridge-heading {
+    font-size: 1.125rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+}
+
+.bridge-body {
+    margin-bottom: 2rem;
+}
+
+.secondary-cta {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-pill);
+    color: var(--text-muted);
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.secondary-cta:hover {
+    border-color: var(--primary-blue);
+    color: var(--primary-blue);
+    background: white;
+}
+
+/* Author Section */
+.author-section {
+    padding: 80px 0;
+    background-color: #F8F6F4;
+    /* Slightly warmer/different than bg */
+}
+
+.author-card {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    background: white;
+    padding: 3rem;
+    border-radius: var(--radius-card);
+    box-shadow: var(--shadow-soft);
+}
+
+.author-headshot {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.author-quote {
+    font-style: italic;
+    font-size: 1.125rem;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+.author-name {
+    font-weight: 600;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+/* Footer */
+footer {
+    padding: 60px 0;
+    text-align: center;
+    border-top: 1px solid var(--border-color);
+    font-size: 0.875rem;
+    color: var(--text-muted);
+}
+
+.footer-links {
+    margin-bottom: 1rem;
+}
+
+.footer-links a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: var(--text-muted);
+}
+
+.footer-links a:hover {
+    color: var(--primary-blue);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-layout {
+        display: flex;
+        /* Stacked */
+        flex-direction: column-reverse;
+        /* Visual below main content or above? User said: "Below CTA on mobile" implies Content First, then Visual. 
+        Wait, "Right side of hero on desktop. Below CTA on mobile". 
+        So: Desktop: [Text][Img]. Mobile: [Text][Img]. 
+        So column-reverse would put Img on top (if DOM order is Text, Img).
+        Let's just use flex-direction: column; if DOM is Text, Img.
+        */
+        flex-direction: column;
+        gap: 3rem;
+        text-align: center;
+    }
+
+    .hero-content {
+        margin: 0 auto;
+    }
+
+    .author-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem;
+    }
+}
